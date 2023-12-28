@@ -62,8 +62,9 @@
             panel1.Controls.Add(panel2);
             panel1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             panel1.Location = new Point(-1, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(636, 412);
+            panel1.Size = new Size(727, 549);
             panel1.TabIndex = 0;
             // 
             // registerclicked
@@ -72,23 +73,22 @@
             registerclicked.Cursor = Cursors.Hand;
             registerclicked.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Underline, GraphicsUnit.Point);
             registerclicked.ForeColor = Color.RoyalBlue;
-            registerclicked.Location = new Point(460, 349);
+            registerclicked.Location = new Point(526, 465);
             registerclicked.Name = "registerclicked";
-            registerclicked.Size = new Size(61, 16);
+            registerclicked.Size = new Size(114, 20);
             registerclicked.TabIndex = 10;
-            registerclicked.Text = "Register.";
-            registerclicked.Click += label5_Click;
+            registerclicked.Text = "Register here.";
+            registerclicked.Click += reg_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.Gray;
-            label3.Location = new Point(317, 349);
+            label3.Location = new Point(362, 465);
             label3.Name = "label3";
-            label3.Size = new Size(146, 16);
+            label3.Size = new Size(185, 20);
             label3.TabIndex = 8;
             label3.Text = "Don't have an account?";
-            label3.Click += label3_Click;
             // 
             // showpassword_login
             // 
@@ -96,10 +96,11 @@
             showpassword_login.BackColor = Color.White;
             showpassword_login.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             showpassword_login.ForeColor = Color.Gray;
-            showpassword_login.Location = new Point(507, 251);
+            showpassword_login.Location = new Point(579, 335);
+            showpassword_login.Margin = new Padding(3, 4, 3, 4);
             showpassword_login.Name = "showpassword_login";
             showpassword_login.RightToLeft = RightToLeft.Yes;
-            showpassword_login.Size = new Size(102, 17);
+            showpassword_login.Size = new Size(129, 21);
             showpassword_login.TabIndex = 7;
             showpassword_login.Text = "Show Password";
             showpassword_login.TextAlign = ContentAlignment.TopLeft;
@@ -112,49 +113,51 @@
             login.FlatAppearance.BorderSize = 0;
             login.FlatStyle = FlatStyle.Flat;
             login.ForeColor = Color.White;
-            login.Location = new Point(317, 292);
+            login.Location = new Point(362, 389);
+            login.Margin = new Padding(3, 4, 3, 4);
             login.Name = "login";
-            login.Size = new Size(128, 43);
+            login.Size = new Size(146, 57);
             login.TabIndex = 6;
             login.Text = "LOG IN";
             login.UseVisualStyleBackColor = false;
+            login.Click += login_Click;
             // 
             // password_login
             // 
-            password_login.Location = new Point(317, 212);
+            password_login.Location = new Point(362, 283);
+            password_login.Margin = new Padding(3, 4, 3, 4);
             password_login.MaxLength = 30;
             password_login.Multiline = true;
             password_login.Name = "password_login";
             password_login.PasswordChar = '*';
-            password_login.Size = new Size(292, 33);
+            password_login.Size = new Size(333, 43);
             password_login.TabIndex = 5;
-            password_login.TextChanged += textBox2_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(317, 193);
+            label1.Location = new Point(362, 257);
             label1.Name = "label1";
-            label1.Size = new Size(67, 16);
+            label1.Size = new Size(83, 20);
             label1.TabIndex = 4;
             label1.Text = "Password";
-            label1.Click += label1_Click;
             // 
             // username_login
             // 
-            username_login.Location = new Point(317, 135);
+            username_login.Location = new Point(362, 180);
+            username_login.Margin = new Padding(3, 4, 3, 4);
             username_login.MaxLength = 30;
             username_login.Multiline = true;
             username_login.Name = "username_login";
-            username_login.Size = new Size(292, 33);
+            username_login.Size = new Size(333, 43);
             username_login.TabIndex = 3;
             // 
             // Username
             // 
             Username.AutoSize = true;
-            Username.Location = new Point(317, 116);
+            Username.Location = new Point(362, 155);
             Username.Name = "Username";
-            Username.Size = new Size(70, 16);
+            Username.Size = new Size(86, 20);
             Username.TabIndex = 2;
             Username.Text = "Username";
             // 
@@ -162,12 +165,11 @@
             // 
             Welcome.AutoSize = true;
             Welcome.Font = new Font("MS UI Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            Welcome.Location = new Point(317, 53);
+            Welcome.Location = new Point(362, 71);
             Welcome.Name = "Welcome";
-            Welcome.Size = new Size(141, 19);
+            Welcome.Size = new Size(170, 24);
             Welcome.TabIndex = 1;
             Welcome.Text = "Welcome back!";
-            Welcome.Click += Welcome_Click;
             // 
             // panel2
             // 
@@ -175,40 +177,41 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox1);
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(293, 412);
+            panel2.Size = new Size(335, 549);
             panel2.TabIndex = 0;
-            panel2.Paint += panel2_Paint;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("MS UI Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(70, 224);
+            label2.Location = new Point(80, 299);
             label2.Name = "label2";
-            label2.Size = new Size(142, 21);
+            label2.Size = new Size(180, 27);
             label2.TabIndex = 1;
             label2.Text = "Nume Proiect";
-            label2.Click += label2_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(86, 105);
+            pictureBox1.Location = new Point(98, 140);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(104, 104);
+            pictureBox1.Size = new Size(119, 139);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(634, 411);
+            ClientSize = new Size(725, 548);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
