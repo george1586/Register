@@ -87,7 +87,6 @@
             password_register.PasswordChar = '*';
             password_register.Size = new Size(292, 33);
             password_register.TabIndex = 16;
-            password_register.TextChanged += password_register_TextChanged;
             // 
             // label1
             // 
@@ -106,7 +105,6 @@
             username_register.Name = "username_register";
             username_register.Size = new Size(292, 33);
             username_register.TabIndex = 14;
-            username_register.TextChanged += username_register_TextChanged;
             // 
             // Username
             // 
@@ -230,15 +228,8 @@
             PerformLayout();
         }
 
-        private void password_register_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void username_register_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
+        
 
         #endregion
         private CheckBox showpassword_register;

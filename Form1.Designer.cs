@@ -129,7 +129,6 @@
             password_login.PasswordChar = '*';
             password_login.Size = new Size(292, 33);
             password_login.TabIndex = 5;
-            password_login.TextChanged += password_login_TextChanged;
             // 
             // label1
             // 
@@ -217,11 +216,7 @@
             ResumeLayout(false);
         }
 
-        private void password_login_TextChanged(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+ 
         #endregion
 
         private Panel panel1;

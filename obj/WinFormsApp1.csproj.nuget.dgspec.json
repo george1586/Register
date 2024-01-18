@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mihne\\source\\repos\\Register1\\WinFormsApp1.csproj": {}
+    "C:\\Users\\Mihne\\source\\repos\\regfinal\\Register\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mihne\\source\\repos\\Register1\\WinFormsApp1.csproj": {
+    "C:\\Users\\Mihne\\source\\repos\\regfinal\\Register\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mihne\\source\\repos\\Register1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Mihne\\source\\repos\\regfinal\\Register\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Mihne\\source\\repos\\Register1\\WinFormsApp1.csproj",
+        "projectPath": "C:\\Users\\Mihne\\source\\repos\\regfinal\\Register\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\Mihne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mihne\\source\\repos\\Register1\\obj\\",
+        "outputPath": "C:\\Users\\Mihne\\source\\repos\\regfinal\\Register\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "HIC.System.Windows.Forms.DataVisualization": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"

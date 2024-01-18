@@ -6,7 +6,7 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
         // Declari o conexiune la baza de date
-        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-IGIQ81E\SQLEXPRESS;Initial Catalog=LogInInfo;Integrated Security=True;Encrypt=True;");
+        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-T24NJOM;Initial Catalog=LogIn;Integrated Security=True");
 
         public Form1()
         {
@@ -30,7 +30,7 @@ namespace WinFormsApp1
             try
             {
                 // String de conexiune pentru SQL Server
-                string connectionString = "Data Source=DESKTOP-IGIQ81E\\SQLEXPRESS;Initial Catalog=LogInInfo;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
+                string connectionString = "Data Source=DESKTOP-T24NJOM;Initial Catalog=LogIn;Integrated Security=True";
 
                 // Utilizarea instrucțiunii 'using' pentru a asigura eliberarea corectă a resurselor
                 using (SqlConnection connect = new SqlConnection(connectionString))
@@ -57,10 +57,10 @@ namespace WinFormsApp1
                                 // Dacă există un utilizator corespunzător, afișează un mesaj de bun venit și navighează către un nou formular
                                 username = username_login.Text;
                                 username_password = password_login.Text;
-                                Form1 form2 = new Form1();
+                                Form2 form2 = new Form2();
+                                MessageBox.Show("Bun venit, " + username);
                                 form2.Show();
                                 this.Hide();
-                                MessageBox.Show("Bun venit, " + username);
                             }
                             else
                             {
@@ -91,10 +91,6 @@ namespace WinFormsApp1
             {
                 password_login.UseSystemPasswordChar = false;
             }
-        }
-        private void password_login_TextChanged()
-        {
-
         }
     }
 }

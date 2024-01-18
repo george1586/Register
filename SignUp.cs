@@ -13,8 +13,11 @@ namespace WinFormsApp1
 {
     public partial class SignUp : Form
     {
-        // Declari o conexiune la baza de date
-        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-IGIQ81E\SQLEXPRESS;Initial Catalog=LogInInfo;Integrated Security=True;Encrypt=True");
+        SqlConnection cn;
+        SqlDataReader dr;
+        SqlCommand cmd;
+        // Declari o conexiune la baza de date si comenzile pentru baza de date
+      
 
         public SignUp()
         {
@@ -23,7 +26,8 @@ namespace WinFormsApp1
 
         private void SignUp_Load(object sender, EventArgs e)
         {
-            // Aici poți adăuga logica necesară la încărcarea formularului SignUp
+            cn = new SqlConnection(@"Data Source=DESKTOP-T24NJOM;Initial Catalog=LogIn;Integrated Security=True");
+            cn.Open();
         }
 
         private void log_Click(object sender, EventArgs e)
@@ -36,7 +40,39 @@ namespace WinFormsApp1
 
         private void signup_button_Click(object sender, EventArgs e)
         {
-            // Aici poți adăuga logica necesară pentru gestionarea evenimentului de apăsare a butonului de înregistrare
+            if (username_register.Text != string.Empty || password_register.Text != string.Empty || username_register.Text != string.Empty)
+            {
+                if (password_register.Text == reenterpassword_signup.Text)
+                {
+                    cmd = new SqlCommand("select * from Login where Nume='" + username_register.Text + "'", cn);
+                    dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        MessageBox.Show("Numele deja exista, incearca altul ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        dr.Close();
+                        cmd = new SqlCommand("insert into Login values(@Nume,@Parola)", cn);
+                        cmd.Parameters.AddWithValue("Nume", username_register.Text);
+                        cmd.Parameters.AddWithValue("Parola", password_register.Text);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Contul tau a fost creat. Te rog inregistreaza-te", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Form1 lform= new Form1();
+                        lform.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Te rog introdu parole identice", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Te rog completeaza toate field-urile.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void showpassword_register_CheckedChanged(object sender, EventArgs e)
